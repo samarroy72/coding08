@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.mystyle {
+  width: 100%;
+  padding: 25px;
+  background-color: coral;
+  color: white;
+  font-size: 25px;
+  box-sizing: border-box;
+  display: inline-block;
+  gap: 5px 5px
+  padding: 10px 30px;
+  text-transform: uppercase;
+  border-radius: 200px;
+}
+
+</style>
+</head>
+<body>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV">
+This is a DIV element.
+</div>
+
+<script>
+function myFunction() {
+   var element = document.getElementById("myDIV");
+   element.classList.add("mystyle");
+}
+</script>
+
+</body>
+</html>
+

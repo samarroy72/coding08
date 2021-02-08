@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p>
+
+<script>
+<script type="text/javascript" src="js/jquery/jquery.min.js"></script>
+<script type="text/javascript">
+    function getContent(pUrl, pDivDestino){
+        var mDivDestino = $('#'+pDivDestino);
+
+        $.ajax({
+            type : 'GET',
+            url : 'www.example.com/api/get/1 ',
+            dataType : 'html',
+            data: {
+                url : pUrl
+            },
+            success : function(data){                                               
+                mDivDestino.html(data);
+            }   
+        });
+    }
+
+
+<a href="#" onclick="javascript:getContent('http://www.example.com/api/get/1 /', 'contenido')">Get Google</a>
+<div id="contenido"></div>
+
+</script>
+ 
+</body>
+</html>
